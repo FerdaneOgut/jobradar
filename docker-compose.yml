@@ -1,0 +1,57 @@
+services:
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - user-service
+      - tracker-service
+      - scraper-service
+      - ai-matching-service
+      - notification-service
+
+  scraper-service:
+    build: ./services/scraper-service
+    ports:
+      - "8081:8081"
+
+  ai-matching-service:
+    build: ./services/ai-matching-service
+    ports:
+      - "8082:8082"
+
+  notification-service:
+    build: ./services/notification-service
+    ports:
+      - "8083:8083"
+
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "8084:8084"
+
+  tracker-service:
+    build: ./services/tracker-service
+    ports:
+      - "8085:8085"
+
+  mongodb:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  mongo_data:

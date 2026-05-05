@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{5854FF58-B8C5-05C6-5BF2-ACE42193F22B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "user-service", "user-service", "{894F4CE1-B484-F744-A4B2-6323977B165A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "services\user-service\UserService\UserService.csproj", "{EA367FFA-0B5F-0669-2F7C-4378B660A8D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tracker-service", "tracker-service", "{DFCAF4BA-3E09-D7AC-D950-598D18DFDE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerService", "services\tracker-service\TrackerService\TrackerService.csproj", "{C31916B4-B369-0355-2F1A-A372E14CF269}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA367FFA-0B5F-0669-2F7C-4378B660A8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA367FFA-0B5F-0669-2F7C-4378B660A8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA367FFA-0B5F-0669-2F7C-4378B660A8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA367FFA-0B5F-0669-2F7C-4378B660A8D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31916B4-B369-0355-2F1A-A372E14CF269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31916B4-B369-0355-2F1A-A372E14CF269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31916B4-B369-0355-2F1A-A372E14CF269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31916B4-B369-0355-2F1A-A372E14CF269}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{894F4CE1-B484-F744-A4B2-6323977B165A} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{EA367FFA-0B5F-0669-2F7C-4378B660A8D3} = {894F4CE1-B484-F744-A4B2-6323977B165A}
+		{DFCAF4BA-3E09-D7AC-D950-598D18DFDE4E} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{C31916B4-B369-0355-2F1A-A372E14CF269} = {DFCAF4BA-3E09-D7AC-D950-598D18DFDE4E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D29FB44-D4A2-416B-BF40-730A4A700F99}
+	EndGlobalSection
+EndGlobal

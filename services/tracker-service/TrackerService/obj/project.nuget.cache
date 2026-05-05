@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "CYHcQ1w39j43DL3lMa07h/b/AroPSFxqoamjzpWs+XPKnAubYCp0Q41RIjlq9Z2ymMkf6xy3V7qqk+TqsQk5sA==",
+  "success": true,
+  "projectFilePath": "/home/ferdane/dev/jobradar/services/tracker-service/TrackerService/TrackerService.csproj",
+  "expectedPackageFiles": [
+    "/home/ferdane/.nuget/packages/microsoft.aspnetcore.openapi/8.0.26/microsoft.aspnetcore.openapi.8.0.26.nupkg.sha512",
+    "/home/ferdane/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/ferdane/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/home/ferdane/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "/home/ferdane/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "/home/ferdane/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "/home/ferdane/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}
