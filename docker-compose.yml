@@ -29,7 +29,8 @@ services:
     build: ./services/user-service
     ports:
       - "8084:8084"
-
+    env_file:
+      - .env
   tracker-service:
     build: ./services/tracker-service
     ports:
