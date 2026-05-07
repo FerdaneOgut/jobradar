@@ -2,7 +2,7 @@ services:
   api-gateway:
     build: ./services/api-gateway
     ports:
-      - "8080:8080"
+      - "6080:6080"
     depends_on:
       - user-service
       - tracker-service
@@ -13,28 +13,30 @@ services:
   scraper-service:
     build: ./services/scraper-service
     ports:
-      - "8081:8081"
+      - "6081:6081"
 
   ai-matching-service:
     build: ./services/ai-matching-service
     ports:
-      - "8082:8082"
+      - "6082:6082"
 
   notification-service:
     build: ./services/notification-service
     ports:
-      - "8083:8083"
+      - "6083:6083"
 
   user-service:
     build: ./services/user-service
     ports:
-      - "8084:8084"
+      - "6084:6084"
     env_file:
       - .env
+    volumes:
+    - uploads_data:/app/uploads
   tracker-service:
     build: ./services/tracker-service
     ports:
-      - "8085:8085"
+      - "6085:6085"
 
   mongodb:
     image: mongo:7
@@ -56,3 +58,4 @@ services:
 
 volumes:
   mongo_data:
+  uploads_data:

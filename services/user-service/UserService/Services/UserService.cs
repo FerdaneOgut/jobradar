@@ -72,4 +72,23 @@ public class UserAuthService
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
+    public async Task<string> UploadCvAsync(string userId, IFormFile file)
+    {
+        var uploadPath = "/app/uploads";
+        Directory.CreateDirectory(uploadPath);
+
+        var extension = Path.GetExtension(file.FileName).ToLower();
+        var fileName = $"{userId}{extension}";
+        var filePath = Path.Combine(uploadPath, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var update = Builders<User>.Update.Set(u => u.CvPath, filePath);
+        await _users.UpdateOneAsync(u => u.Id == userId, update);
+
+        return filePath;
+    }
 }

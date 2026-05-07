@@ -4,7 +4,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.WebHost.UseUrls("http://0.0.0.0:8085");
+builder.WebHost.UseUrls("http://0.0.0.0:6085");
 
 var app = builder.Build();
 

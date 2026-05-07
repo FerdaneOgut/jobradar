@@ -8,5 +8,5 @@ RUN dotnet publish ./TrackerService/TrackerService.csproj -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=builder /app/out .
-EXPOSE 8085
+EXPOSE 6085
 CMD ["dotnet", "TrackerService.dll"]
