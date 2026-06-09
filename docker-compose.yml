@@ -36,6 +36,10 @@ services:
     build: ./services/notification-service
     ports:
       - "6083:6083"
+    env_file:
+      - .env
+    depends_on:
+      - rabbitmq
 
   user-service:
     build: ./services/user-service
@@ -68,7 +72,11 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 volumes:
   mongo_data:
   uploads_data:
