@@ -24,6 +24,13 @@ services:
     build: ./services/ai-matching-service
     ports:
       - "6082:6082"
+    env_file:
+      - .env
+    depends_on:
+    - mongodb
+    - redis
+    volumes:
+    - uploads_data:/app/uploads
 
   notification-service:
     build: ./services/notification-service
@@ -42,7 +49,8 @@ services:
     build: ./services/tracker-service
     ports:
       - "6085:6085"
-
+    env_file:
+      - .env
   mongodb:
     image: mongo:7
     ports:
