@@ -3,6 +3,8 @@ services:
     build: ./services/api-gateway
     ports:
       - "6080:6080"
+    env_file:
+    - .env
     depends_on:
       - user-service
       - tracker-service
